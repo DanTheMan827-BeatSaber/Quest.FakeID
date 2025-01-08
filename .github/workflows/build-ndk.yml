@@ -92,21 +92,11 @@ jobs:
         files=( $pattern )
         echo "NAME=${files[0]}" >> ${GITHUB_OUTPUT}
 
-    - name: Rename debug artifact
-      run: mv "./build/debug/${{ steps.libname.outputs.NAME }}" "./build/debug_${{ steps.libname.outputs.NAME }}"
-
     - name: Upload non-debug artifact
       uses: actions/upload-artifact@v4
       with:
         name: ${{ steps.libname.outputs.NAME }}
         path: ./build/${{ steps.libname.outputs.NAME }}
-        if-no-files-found: error
-
-    - name: Upload debug artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: debug_${{ steps.libname.outputs.NAME }}
-        path: ./build/debug_${{ steps.libname.outputs.NAME }}
         if-no-files-found: error
 
     - name: Upload qmod artifact
@@ -138,7 +128,6 @@ jobs:
         tag_name: ${{ github.event.inputs.version }}
         files: |
           ./build/${{ steps.libname.outputs.NAME }}
-          ./build/debug_${{ steps.libname.outputs.NAME }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

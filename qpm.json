@@ -17,7 +17,9 @@
       "build": [
         "pwsh ./scripts/build.ps1"
       ],
-      "clean": ["pwsh ./scripts/build.ps1 -clean"],
+      "clean": [
+        "pwsh ./scripts/build.ps1 -clean"
+      ],
       "copy": [
         "pwsh ./scripts/copy.ps1 $0:?"
       ],
@@ -36,15 +38,21 @@
       ],
       "tomb": [
         "pwsh ./scripts/pull-tombstone.ps1"
+      ],
+      "make-hooking": [
+        "pwsh ./common-stuff/scripts/make-hooking.ps1"
       ]
     },
-    "qmodIncludeDirs": ["./build", "./extern/libs"],
+    "qmodIncludeDirs": [
+      "./build",
+      "./extern/libs"
+    ],
     "qmodOutput": "./Fake ID.qmod"
   },
   "dependencies": [
     {
       "id": "beatsaber-hook",
-      "versionRange": "^6.3.0",
+      "versionRange": "^6.4.0",
       "additionalData": {}
     },
     {

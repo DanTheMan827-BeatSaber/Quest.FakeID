@@ -10,7 +10,7 @@
   "packageVersion": "1.40.0_2229",
   "description": "Sets the player age to an adult when the game fails to run the check.",
   "dependencies": [],
-  "modFiles": ["${binary}"],
+  "lateModFiles": ["${binary}"],
   "libraryFiles": [],
   "fileCopies": []
 }

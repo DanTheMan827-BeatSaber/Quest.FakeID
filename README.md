@@ -1,6 +1,6 @@
 # Fake ID
 
-Sets the player age to an adult when the game fails to run the check.
+Sets the player age to an adult.
 
 Use `qpm s build` to build
 Same goes for `qpm s copy` and `qpm s qmod`

@@ -52,7 +52,7 @@
   "dependencies": [
     {
       "id": "beatsaber-hook",
-      "versionRange": "^6.4.0",
+      "versionRange": "^5.1.9",
       "additionalData": {}
     },
     {
@@ -63,13 +63,13 @@
       }
     },
     {
-      "id": "paper2_scotland2",
-      "versionRange": "^4.3.2",
+      "id": "paper",
+      "versionRange": "^3.7.0",
       "additionalData": {}
     },
     {
       "id": "bs-cordl",
-      "versionRange": "4000.*",
+      "versionRange": "3700.*",
       "additionalData": {}
     }
   ]

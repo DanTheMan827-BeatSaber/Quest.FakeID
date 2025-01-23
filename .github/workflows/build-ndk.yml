@@ -2,6 +2,10 @@ name: NDK build
 
 on:
   workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version'
+        required: false
   push:
     tags:
       - "v*"
@@ -63,20 +67,25 @@ jobs:
         echo ${{ steps.setup-ndk.outputs.ndk-path }} > ${GITHUB_WORKSPACE}/ndkpath.txt
         cat ${GITHUB_WORKSPACE}/ndkpath.txt
 
-    # get version from pushed tag
+    # get version from pushed tag or workflow dispatch
     - name: Extract version
-      if: startsWith(github.ref, 'refs/tags/v')
+      if: startsWith(github.ref, 'refs/tags/v') || github.event.inputs.version != ''
       id: version
       run: |
-        TAG="${GITHUB_REF#refs/tags/}"
-        FULL_VERSION="${GITHUB_REF#refs/tags/v}"
-        VERSION="${FULL_VERSION%%[-+]*}"
+        if [ "${{ github.event.inputs.version }}" != "" ]; then
+          VERSION="${{ github.event.inputs.version }}"
+          FULL_VERSION="${{ github.event.inputs.version }}"
+        else
+          TAG="${GITHUB_REF#refs/tags/}"
+          FULL_VERSION="${GITHUB_REF#refs/tags/v}"
+          VERSION="${FULL_VERSION%%[-+]*}"
+        fi
         echo "TAG=$TAG" >> ${GITHUB_OUTPUT}
         echo "VERSION=$VERSION" >> ${GITHUB_OUTPUT}
         echo "FULL_VERSION=$FULL_VERSION" >> ${GITHUB_OUTPUT}
 
     - name: Update version in qpm.json, qpm.shared.json, and mod.template.json
-      if: startsWith(github.ref, 'refs/tags/v')
+      if: startsWith(github.ref, 'refs/tags/v') || github.event.inputs.version != ''
       run: |
         # Update qpm.json
         if [ -f qpm.json ]; then

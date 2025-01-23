@@ -6,7 +6,7 @@
     "info": {
       "name": "Fake ID",
       "id": "FakeId",
-      "version": "0.1.1",
+      "version": "0.1.0",
       "url": null,
       "additionalData": {
         "overrideSoName": "libFakeId.so",

@@ -53,6 +53,16 @@
     },
     "dependencies": [
       {
+        "id": "bs-cordl",
+        "versionRange": "4000.*",
+        "additionalData": {}
+      },
+      {
+        "id": "paper2_scotland2",
+        "versionRange": "^4.5.0",
+        "additionalData": {}
+      },
+      {
         "id": "beatsaber-hook",
         "versionRange": "^6.4.0",
         "additionalData": {}
@@ -63,16 +73,6 @@
         "additionalData": {
           "includeQmod": false
         }
-      },
-      {
-        "id": "paper2_scotland2",
-        "versionRange": "^4.3.2",
-        "additionalData": {}
-      },
-      {
-        "id": "bs-cordl",
-        "versionRange": "4000.*",
-        "additionalData": {}
       }
     ]
   },
@@ -104,12 +104,12 @@
     {
       "dependency": {
         "id": "paper2_scotland2",
-        "versionRange": "=4.4.2",
+        "versionRange": "=4.5.0",
         "additionalData": {
-          "soLink": "https://github.com/Fernthedev/paperlog/releases/download/v4.4.2/libpaper2_scotland2.so",
+          "soLink": "https://github.com/Fernthedev/paperlog/releases/download/v4.5.0/libpaper2_scotland2.so",
           "overrideSoName": "libpaper2_scotland2.so",
-          "modLink": "https://github.com/Fernthedev/paperlog/releases/download/v4.4.2/paper2_scotland2.qmod",
-          "branchName": "version/v4_4_2",
+          "modLink": "https://github.com/Fernthedev/paperlog/releases/download/v4.5.0/paper2_scotland2.qmod",
+          "branchName": "version/v4_5_0",
           "compileOptions": {
             "systemIncludes": [
               "shared/utfcpp/source"
@@ -118,7 +118,7 @@
           "cmake": false
         }
       },
-      "version": "4.4.2"
+      "version": "4.5.0"
     },
     {
       "dependency": {

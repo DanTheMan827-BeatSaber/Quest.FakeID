@@ -51,6 +51,16 @@
   },
   "dependencies": [
     {
+      "id": "bs-cordl",
+      "versionRange": "4000.*",
+      "additionalData": {}
+    },
+    {
+      "id": "paper2_scotland2",
+      "versionRange": "^4.5.0",
+      "additionalData": {}
+    },
+    {
       "id": "beatsaber-hook",
       "versionRange": "^6.4.0",
       "additionalData": {}
@@ -61,16 +71,6 @@
       "additionalData": {
         "includeQmod": false
       }
-    },
-    {
-      "id": "paper2_scotland2",
-      "versionRange": "^4.3.2",
-      "additionalData": {}
-    },
-    {
-      "id": "bs-cordl",
-      "versionRange": "4000.*",
-      "additionalData": {}
     }
   ]
 }

@@ -1,4 +1,5 @@
 {
+  "$schema": "https://raw.githubusercontent.com/QuestPackageManager/QPM.Package/refs/heads/main/qpm.schema.json",
   "sharedDir": "shared",
   "dependenciesDir": "extern",
   "version": "0.1.0",
@@ -47,12 +48,13 @@
       "./build",
       "./extern/libs"
     ],
-    "qmodOutput": "./Fake ID.qmod"
+    "qmodOutput": "./Fake ID.qmod",
+    "ndk": "^27.0.0"
   },
   "dependencies": [
     {
       "id": "bs-cordl",
-      "versionRange": "4000.*",
+      "versionRange": "4010.*",
       "additionalData": {}
     },
     {

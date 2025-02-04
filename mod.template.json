@@ -10,7 +10,9 @@
   "packageVersion": "1.40.1_3323",
   "description": "Sets the player age to an adult.",
   "dependencies": [],
-  "lateModFiles": ["${binary}"],
+  "modFiles": [
+    "${binary}"
+  ],
   "libraryFiles": [],
   "fileCopies": []
 }

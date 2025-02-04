@@ -1,13 +1,13 @@
 {
   "$schema": "https://raw.githubusercontent.com/QuestPackageManager/QPM.Package/refs/heads/main/qpm.shared.schema.json",
   "config": {
-    "version": "0.1.0",
+    "version": "0.4.0",
     "sharedDir": "shared",
     "dependenciesDir": "extern",
     "info": {
       "name": "Fake ID",
       "id": "FakeId",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "url": null,
       "additionalData": {
         "overrideSoName": "libFakeId.so",
@@ -22,8 +22,16 @@
         "clean": [
           "pwsh ./scripts/build.ps1 -clean"
         ],
+        "clean-qmod": [
+          "qpm s clean",
+          "qpm s qmod"
+        ],
         "copy": [
           "pwsh ./scripts/copy.ps1 $0:?"
+        ],
+        "deepclean": [
+          "pwsh ./scripts/build.ps1 -clean -skipBuild",
+          "qpm clear"
         ],
         "logcat": [
           "pwsh ./scripts/start-logging.ps1"
@@ -32,8 +40,16 @@
           "pwsh ./common-stuff/scripts/make-hooking.ps1"
         ],
         "qmod": [
-          "pwsh ./scripts/build.ps1",
-          "pwsh ./scripts/createqmod.ps1"
+          "qpm s build",
+          "qpm qmod zip"
+        ],
+        "rebuild": [
+          "qpm s deepclean",
+          "qpm s build"
+        ],
+        "rebuild-qmod": [
+          "qpm s deepclean",
+          "qpm s qmod"
         ],
         "restart": [
           "pwsh ./scripts/restart-game.ps1"
@@ -50,23 +66,25 @@
         "./build",
         "./extern/libs"
       ],
-      "qmodIncludeFiles": [],
+      "qmodIncludeFiles": [
+        "./cover.png"
+      ],
       "qmodOutput": "./Fake ID.qmod"
     },
     "dependencies": [
-      {
-        "id": "bs-cordl",
-        "versionRange": "4010.*",
-        "additionalData": {}
-      },
       {
         "id": "paper2_scotland2",
         "versionRange": "^4.5.0",
         "additionalData": {}
       },
       {
+        "id": "bs-cordl",
+        "versionRange": "4010.*",
+        "additionalData": {}
+      },
+      {
         "id": "beatsaber-hook",
-        "versionRange": "^6.4.0",
+        "versionRange": "^6.3.0",
         "additionalData": {}
       },
       {

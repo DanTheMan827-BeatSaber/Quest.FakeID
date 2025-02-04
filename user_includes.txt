@@ -1,2 +1,0 @@
-# This file contains a list of additional include paths relative to this file.
-common-stuff/include

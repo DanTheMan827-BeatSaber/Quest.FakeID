@@ -6,7 +6,7 @@
   "info": {
     "name": "Fake ID",
     "id": "FakeId",
-    "version": "0.1.3",
+    "version": "0.2.0",
     "url": null,
     "additionalData": {
       "overrideSoName": "libFakeId.so",
@@ -65,7 +65,7 @@
         "pwsh ./scripts/update-version.ps1 $0:?"
       ]
     },
-    "ndk": "^27.2.12479018",
+    "ndk": "^27.3.13750724",
     "qmodIncludeDirs": [
       "./build",
       "./extern/libs"
@@ -75,18 +75,13 @@
   },
   "dependencies": [
     {
-      "id": "autohooks",
-      "versionRange": "^0.1.0",
-      "additionalData": {}
-    },
-    {
       "id": "beatsaber-hook",
-      "versionRange": "^6.4.2",
+      "versionRange": "^7.4.0",
       "additionalData": {}
     },
     {
       "id": "bs-cordl",
-      "versionRange": "4008",
+      "versionRange": "^4100",
       "additionalData": {}
     },
     {
@@ -100,6 +95,11 @@
       "additionalData": {
         "includeQmod": false
       }
+    },
+    {
+      "id": "flamingo",
+      "versionRange": "^1.1.2",
+      "additionalData": {}
     }
   ]
 }

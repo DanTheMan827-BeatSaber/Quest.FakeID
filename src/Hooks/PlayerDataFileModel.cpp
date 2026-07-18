@@ -16,8 +16,8 @@ MAKE_LATE_HOOK_MATCH(
 ) {
     auto value = PlayerDataFileModel_Load(self, jsonString);
 
-    if (value->userAgeCategory != GlobalNamespace::UserAgeCategory::Adult) {
-        value->userAgeCategory = GlobalNamespace::UserAgeCategory::Adult;
+    if (value->userAgeCategory != OculusStudios::Platform::Core::UserAgeCategory::Adult) {
+        value->userAgeCategory = OculusStudios::Platform::Core::UserAgeCategory::Adult;
         value->desiredSensitivityFlag = GlobalNamespace::PlayerSensitivityFlag::Explicit;
         value->playerAgreements->playerSensitivityFlagVersion = 3;
     }

@@ -81,17 +81,22 @@
     },
     {
       "id": "beatsaber-hook",
-      "versionRange": "^8.0.1",
+      "versionRange": "^8.0.7",
       "additionalData": {}
     },
     {
       "id": "bs-cordl",
-      "versionRange": "4402.*",
+      "versionRange": "4403.*",
+      "additionalData": {}
+    },
+    {
+      "id": "flamingo",
+      "versionRange": "^1.2.1",
       "additionalData": {}
     },
     {
       "id": "paper2_scotland2",
-      "versionRange": "^4.6.5",
+      "versionRange": "^4.8.0",
       "additionalData": {}
     },
     {
@@ -100,11 +105,6 @@
       "additionalData": {
         "includeQmod": false
       }
-    },
-    {
-      "id": "flamingo",
-      "versionRange": "^1.2.1",
-      "additionalData": {}
     }
   ]
 }
